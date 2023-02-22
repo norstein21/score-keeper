@@ -1,0 +1,13 @@
+.ch-title {
+  background-color: transparent;
+  /* align-items: stretch; */
+  box-shadow: 0 0.125em 0.25em rgb(10 10 10 / 10%);
+}
+
+.ch-title-text {
+  align-items: center;
+  color: #363636;
+  flex-grow: 1;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+}

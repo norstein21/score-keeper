@@ -7,48 +7,79 @@
     <title>Score Keeper</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="app.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <div class="card">
-            <header class="card-header">
-              <p class="card-header-title">Component</p>
-              <button class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.
-                <a href="#">@bulmaio</a>. <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+              <figure class="image is-2by1">
+                <img
+                  src="https://royaltennisclub.com/wp-content/uploads/2018/06/mainpic_pingpong.jpg"
+                  alt="headerPingpong"
+                />
+              </figure>
+              <header class="ch-title">
+                <p class="ch-title-text has-text-centered">
+                  Ping Pong Scoreboard
+                </p>
+              </header>
+              <div class="card-content has-text-centered">
+                <div class="content columns">
+                  <section class="card column">
+                    <article class="ch-title">
+                      <p class="ch-title-text" id="player1Name">Player 1</p>
+                    </article>
+                    <article class="card-content title is-1" id="playerOne">
+                      0
+                    </article>
+                  </section>
+                  <section class="card column">
+                    <article class="ch-title">
+                      <p class="ch-title-text" id="player2Name">Player 2</p>
+                    </article>
+                    <article class="title is-1 card-content" id="playerTwo">
+                      0
+                    </article>
+                  </section>
+                </div>
+                <p class="subtitle">Click button below to setup the score</p>
+                <label for="winnerScore" class="label is-large is-inline"
+                  >Limit</label
+                >
+                <div class="select is-rounded">
+                  <select name="winnerScore" id="winnerScore"></select>
+                </div>
               </div>
+              <footer class="card-footer">
+                <button
+                  class="is-success button card-footer-item"
+                  id="btnPlayerOne"
+                >
+                  +1&nbsp;<span id="player1Name">Player 1</span>
+                </button>
+                <button
+                  id="btnPlayerTwo"
+                  class="is-link button card-footer-item"
+                >
+                  +1&nbsp;<span id="player2Name">Player 2</span>
+                </button>
+                <button
+                  id="resetScore"
+                  class="is-danger button card-footer-item"
+                >
+                  Reset
+                </button>
+              </footer>
             </div>
-            <footer class="card-footer">
-              <a href="#" class="card-footer-item">Save</a>
-              <a href="#" class="card-footer-item">Edit</a>
-              <a href="#" class="card-footer-item">Delete</a>
-            </footer>
           </div>
         </div>
       </div>
-    </div>
-
-    <h1><span id="playerOne">0</span> to <span id="playerTwo">0</span></h1>
-    <select name="winnerScore" id="winnerScore"></select>
-    <button id="btnPlayerOne">+1 Player 1</button>
-    <button id="btnPlayerTwo">+2 Player 2</button>
-    <button id="resetScore">Reset</button>
-
+    </section>
     <script src="app.js"></script>
   </body>
 </html>
